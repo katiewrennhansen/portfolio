@@ -10,35 +10,31 @@
   </head>
   <body>
 
-  <section class="cover" id="cover">
+  <header class="cover" id="cover">
     <nav>
       <ul class="nav">
         <li><span class="logo">KatieWrenn</span></li>
-
-        <button class="toggler" type="button" data-toggle="collapse" data-target="#dropdown" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-        <i class="fas fa-bars"></i></button>
-
         <div class="dropdownContent" id="dropdown">
-        <li><a href="#about">About</a></li>
-        <li class="border"><a href="#work">Work</a></li>
-        <li class="border"><a href="#contact">Contact</a></li>
+          <li class="abt"><a href="#about">About</a></li>
+          <li class="border"><a href="#work">Work</a></li>
+          <li class="border"><a href="#contact">Contact</a></li>
         </div>
-
       </ul>
     </nav>
 
-      <h1>Hello! My name is <span>Katie</span></h1>
-    </section>
+      <h1 class="title">Hello! My name is <span>Katie</span></h1>
+    </header>
 
 
     <section class="about" id="about">
       <div class="image">
-      <img src="images/IMG_0665.jpg" alt="Katie Hansen">
+      <img src="images/IMG_0665.jpg" alt="Image of Katie Hansen">
       </div>
 
       <div class="content">
       <h2>A little bit about me...</h2>
-      <p>Refuse to leave cardboard box side-eyes your "jerk" other hand while being petted reward the chosen human with a slow blink so the door is opening! how exciting oh, it's you, meh for spill litter box, scratch at owner, destroy all furniture, especially couch. Yowling nonstop the whole night. Poop on grasses your pillow is now my pet bed sleep everywhere, but not in my bed cat snacks, or i like cats because they are fat and fluffy need to check on human, have not seen in an hour might be dead oh look, human is alive, hiss at human, feed me but cats making all the muffins.</p>
+      <!-- <p>I am a Front-End Developer based out of Raleigh, North Carolina. My journey into Web Development began relatively recently, after beginning a career in health and wellness, in which, I desperately lacked mental stimulation.
+       </p> -->
       </div>
     </section>
 
@@ -53,9 +49,10 @@
       <h3>Front-End Technologies</h3>
 
       <ul class="front">
-        <li>HTML5</li>
+        <li>HTML</li>
         <li>CSS</li>
         <li>Bootstrap</li>
+        <li>Semantic UI</li>
         <li>Javascript</li>
         <li>jQuery</li>
       </ul>
@@ -64,19 +61,27 @@
 
 
     <section class="work" id="work">
-      <h2>Recent Work</h2>
-      <div class="project1"></div>
-      <div class="project1"></div>
-      <div class="project1"></div>
-      <div class="project1"></div>
+      <h2>Projects</h2>
+      <div class="grid">
+        <div class="project1">
+          <h5>RGB Color Guessing Game</h5>
+          <a href="projects/colorGame/colorGame.html" target="_blank"><img class="proj" src="projects/colorGame/colorGamePhoto.png" alt="image containing link to color game project"></a>
+        </div>
+        <div class="project1">
+          <h5>To-Do List App</h5>
+          <a href="projects/toDo/index.html" target="_blank"><img class="proj" src="projects/toDo/toDoPhoto.png" alt="image containing link to to do list app"></a>
+        </div>
+        <div class="project1"></div>
+        <div class="project1"></div>
+      </div>
     </section>
 
 
-    <section class="contact" id="contact">
+    <footer class="contact" id="contact">
       <h2>Want to work together?</h2>
-      <h3>Hire me!</h3>
+      <h3>Contact me!</h3>
       <p class="email"><a href="mailto:khansen0415@gmail.com">khansen0415@gmail.com</a></p>
-      <h4>Or find me on social media</h4>
+      <h4>Or find me online</h4>
       <ul class="social" id="social">
         <li><a href="https://www.facebook.com/kawrenn415" title="link to facebook page" target="_blank"><i class="fab fa-facebook-f" aria-hidden="true"></i><span class="sr-only">Facebook</span></a></li>
         <li><a href="https://www.instagram.com/katiewrenn15/" title="link to intagram page" target="_blank"><i class="fab fa-instagram" aria-hidden="true"></i><span class="sr-only">Instagram</span></a></li>
@@ -88,7 +93,7 @@
         <p>Copyright 2019 www.katiewrennhansen.com</p>
       </div>
 
-    </section>
+    </footer>
 
 
     <script type="text/javascript" src="scripts.js"></script>
