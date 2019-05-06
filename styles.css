@@ -1,8 +1,12 @@
+/******TODO******/
 /*  fix images  */
 /*  add grid properties  */
+/*  finalize responsive  */
 /*  animate menu  */
 /*  add content  */
+/*  refactor code  */
 /*  go live!  */
+
 
 /**********GENERAL STYLES************/
 html {
@@ -45,7 +49,7 @@ h5{
   color: #f1fffa;
   text-align: center;
   margin-bottom: 15px;
-  font-size: 1.4rem;
+  font-size: 1.8rem;
 }
 
 .wrapper {
@@ -141,16 +145,15 @@ span {
   background: #b5ffe9;
   color: #444545;
   margin: 0;
-  padding: 60px;
+  padding: 60px 0 60px 0;
   font-size: 1.2rem;
 }
 
 img {
-  display: grid;
-  justify-content: center;
+  /* justify-items: center; */
   width: 60%;
   border-radius: 50%;
-  margin: 0 auto;
+  /* margin: 0 auto; */
 }
 
 .about h2 {
@@ -206,14 +209,6 @@ img {
 .work h2 {
   padding-top: 60px;
   text-align: left;
-}
-
-.project1 {
-  background: #0b132b;
-  border: 1px solid rgba(255,255,255,0.2);
-  /* -webkit-box-shadow: 0px 0px 10px 2px rgba(11,19,43,0.75);
-  -moz-box-shadow: 0px 0px 10px 2px rgba(11,19,43,0.75);
-  box-shadow: 0px 0px 10px 2px rgba(255,255,255,0.75); */
 }
 
 .hover {
@@ -293,7 +288,7 @@ img {
 
 .contact {
   background: #5bc0be;
-  padding: 60px;
+  padding: 60px 0 60px 0;
   color: #f1fffa;
   text-align: center;
   padding-bottom: 20px;
@@ -326,7 +321,7 @@ img {
   display: grid;
   text-align: center;
   grid-template-columns: 1fr 1fr 1fr 1fr;
-  padding-bottom: 40px;
+  padding-bottom: 10px;
 }
 
 .fab {
@@ -339,7 +334,7 @@ img {
 
 .copyright {
   padding-top: 10px;
-  border-top: 1px solid #0b132b;
+  border-top: 1px solid rgba(11,19,43,0.3)
 }
 
 /************KEYFRAMES******************/
@@ -385,16 +380,15 @@ img {
   .about h2 {
     margin-top: 0;
   }
-  .about {
+  /* .about {
     display: inline-grid;
     grid-template-columns: 1fr 7fr;
     justify-content: center;
     grid-column-gap: 5%;
-  }
-  img {
+  } */
+  /* img {
     width: 300px;
-  }
-
+  } */
   .fa-laptop-code {
     padding-top: 8px;
   }
@@ -402,7 +396,7 @@ img {
     grid-column: 3 / 7;
   }
   .back {
-    grid-column: 7 / 12;
+    grid-column: 7 / 11;
   }
   .skills h3 {
     font-size: 1.8rem;
@@ -411,6 +405,10 @@ img {
     display: grid;
     grid-template: 1fr 1fr / 1fr 1fr;
     grid-gap: 4em;
+    margin-bottom: 90px;
+  }
+  .social {
+    font-size: 2.3rem;
   }
 }
 
@@ -446,6 +444,7 @@ img {
   }
   .skills h3{
     font-size: 2rem;
+    padding-bottom: 20px;
   }
   .skills ul {
     font-size: 1.5rem;
@@ -457,9 +456,12 @@ img {
     grid-column: 3 / 7;
   }
   .back {
-    grid-column: 7 / 12;
+    grid-column: 7 / 11;
   }
   h5 {
     font-size: 2rem;
+  }
+  .social {
+    font-size: 2.5rem;
   }
 }
