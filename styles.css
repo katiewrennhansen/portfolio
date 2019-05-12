@@ -23,7 +23,8 @@ html {
 }
 
 body {
-  font-family: Nunito;
+  font-family: "Nunito";
+  font-weight: 300;
 }
 
 a {
@@ -41,15 +42,22 @@ ul {
 
 h2 {
   padding-bottom: 20px;
-  font-size: 3rem;
+  font-size: 2.5rem;
   text-align: center;
+  font-weight: 500;
+}
+
+h3 {
+  font-size: 1.2rem;
+  font-weight: 300;
 }
 
 h5{
-  color: #f1fffa;
+  color: #0b132b;
   text-align: center;
   margin-bottom: 15px;
-  font-size: 1.8rem;
+  font-size: 1.3rem;
+  font-weight: 300;
 }
 
 .wrapper {
@@ -66,8 +74,7 @@ h5{
 
 nav {
   text-align: center;
-  font-size: 1.5rem;
-  font-weight: 300;
+  font-size: 1.2rem;
   display: block;
   animation-name: fade;
   animation-duration: 2500ms;
@@ -78,12 +85,12 @@ nav {
 }
 
 .nav li {
-   padding: 3px 10px 3px 10px;
+   padding: 5px 10px 5px 10px;
    max-width: 100%;
 }
 
 .logo{
-   font-size: 2.5rem;
+   font-size: 2rem;
    padding-top: 300px;
 }
 
@@ -98,12 +105,17 @@ nav {
   animation-fill-mode: forwards;
 }
 
+.dropdownContent a:hover {
+  color: #d14067;
+}
+
 
 /************LANDING PAGE**************/
 
 .cover {
   margin-top: 0;
-  background: #0b132b;
+  display: grid;
+  background: #101319;
   width: 100%;
   height: 100vh;
   color: #f1fffa;
@@ -118,30 +130,33 @@ nav {
 span {
   color: #5bc0be;
   font-family: "Dancing Script", cursive;
-  font-size: 4rem;
+  font-size: 3rem;
   display: inline;
 }
 
 .cover h1 {
   margin: 20px;
   text-align: center;
-  font-size: 3rem;
-  padding-top: 15vh;
+  letter-spacing: 0.1rem;
+  font-weight: 200;
+  font-size: 2rem;
+  padding-top: 12vh;
   animation-name: fade;
   animation-duration: 2500ms;
 }
 
 .cover p {
   text-align: center;
-  font-size: 1.6rem;
+  font-size: 1.3rem;
   animation-name: fade;
   animation-duration: 2500ms;
+  font-weight: 200;
 }
 
 /***************ABOUT****************/
 
 .about {
-  background: #b5ffe9;
+  background: #fcfcfc;
   color: #444545;
   margin: 0;
   padding: 60px 0 60px 0;
@@ -149,10 +164,11 @@ span {
 }
 
 img {
-  /* justify-items: center; */
+  display: grid;
+  text-align: center;
+  margin: 0 auto;
   width: 60%;
   border-radius: 50%;
-  /* margin: 0 auto; */
 }
 
 .about h2 {
@@ -162,7 +178,7 @@ img {
 /***************SKILLS****************/
 
 .skills {
-  background: #f1fffa;
+  background: #fff;
   padding: 60px 0 60px 0;
   color: #0b132b;
   font-size: 1.2rem;
@@ -184,11 +200,17 @@ img {
 .skills ul {
   margin-top: 10px;
   margin-bottom: 30px;
-  font-weight: 300;
 }
 
 .tech li {
   padding: 8px;
+  font-size: 1.1rem;
+  font-weight: 100;
+}
+
+.tech .fab {
+  font-size: 1.5rem;
+  color: black;
 }
 
 /***************PROJECTS****************/
@@ -201,13 +223,12 @@ img {
 }
 
 .work {
-  background: #0b132b;
-  color: #f1fffa;
+  background:  #f4f4f4;
+  color: #0b132b;
 }
 
 .work h2 {
   padding-top: 60px;
-  text-align: left;
 }
 
 .hover {
@@ -234,7 +255,7 @@ img {
 .hover a.link {
   -webkit-transition: all 0.3s ease-in;
   transition: all 0.3s ease-in;
-  color:#f1fffa;
+  color:#0b132b;
 }
 
 .hover:hover .proj {
@@ -267,18 +288,18 @@ img {
 
 .overlay p {
   padding-bottom: 25px;
-  color: #f1fffa;
+  color:#0b132b;
 }
 
 .link {
   width: 60%;
-  border: 1px solid #f1fffa;    
+  border: 1px solid #0b132b;   
   padding: 8px;
-  font-size: 1.2rem;
+  font-size: 1.1rem;
 }
 
 .link:hover {
-  box-shadow: 0 0 8px #f1fffa;
+  box-shadow: 0 0 8px #0b132b;
 }
 
 
@@ -286,7 +307,7 @@ img {
 /***************CONTACT****************/
 
 .contact {
-  background: #5bc0be;
+  background: #222833;
   padding: 60px 0 60px 0;
   color: #f1fffa;
   text-align: center;
@@ -294,46 +315,59 @@ img {
 }
 
 .contact h3 {
-  font-size: 2rem;
+  font-size: 1.6rem;
 }
 
 .contact p {
-  padding: 30px 10px;
+  padding: 20px 10px;
   font-size: 1.3rem;
 }
 
 .email a {
-  color: #0b132b;
+  color: #5bc0be;
+  font-size: 1rem;
+  font-weight: 500;
+  text-decoration: underline;
 }
 
 .email a:hover {
-  color: #f1fffa;
+  color: #d14067;
+  animation-name: hover;
+  animation-duration: 500ms;
+  animation-fill-mode: forwards;
 }
 
 .contact h4 {
-  padding-bottom: 40px;
-  font-size: 1.5rem;
+  padding-bottom: 20px;
+  font-size: 1.3rem;
+  font-weight: 300;
 }
 
 .social {
   font-size: 2rem;
   display: grid;
   text-align: center;
-  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-template-columns: 1fr 1fr;
+  grid-column: 4 / 10;
   padding-bottom: 10px;
 }
 
-.fab {
-  color: #0b132b;
+.social .fab{
+  color: #5bc0be;
 }
 
-.fab:hover {
-  color: #f1fffa;
+.social .fab:hover {
+  color: #d14067;
+  animation-name: hover;
+  animation-duration: 500ms;
+  animation-fill-mode: forwards;
 }
 
-.copyright {
-  padding-top: 10px;
-  border-top: 1px solid rgba(11,19,43,0.3)
+.copyright p {
+  padding: 30px 0 30px 0;
+  border-top: 1px solid rgba(255,255,255,0.3);
+  font-size: 1rem;
+  color: rgba(255,255,255,0.2);
 }
 
 /************KEYFRAMES******************/
@@ -353,8 +387,8 @@ img {
   }
   100%{
     opacity: 1.0;
-    border-top: 1px solid #5bc0be;
-    border-bottom: 1px solid #5bc0be;
+    /* border-top: 1px solid #d14067;
+    border-bottom: 1px solid #d14067; */
   }
 }
 
@@ -366,8 +400,14 @@ img {
     font-size: 3.2rem;
     padding-bottom: 40px;
   }
-  .cover h1 {
-    padding-top: 25vh;
+  .cover h1{
+    font-size: 3.5rem;
+  }
+  span {
+    font-size: 5rem;
+  }
+  .cover p {
+    font-size: 2rem;
   }
   #dropdown {
     margin-top: 20px;
@@ -375,19 +415,11 @@ img {
     grid-template-columns: 1fr 1fr 1fr;
     justify-content: center;
     grid-column-gap: 40%;
+    font-size: 1.4rem;
   }
   .about h2 {
     margin-top: 0;
   }
-  /* .about {
-    display: inline-grid;
-    grid-template-columns: 1fr 7fr;
-    justify-content: center;
-    grid-column-gap: 5%;
-  } */
-  /* img {
-    width: 300px;
-  } */
   .fa-laptop-code {
     padding-top: 8px;
   }
@@ -428,12 +460,19 @@ img {
   .logo {
     font-size: 3rem;
   }
-  #dropdown {
+  /* #dropdown {
     display: inline-grid;
     grid-template-columns: 1fr 1fr 1fr;
     justify-content: center;
     grid-column-gap: 70%;
-    padding-top: 20px;
+    padding-top: 20px; 
+  }*/
+  .nav ul {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+  }
+  span.logo{
+    grid-column: 3 / 4;
   }
   img {
     width: 320px;
