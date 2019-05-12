@@ -112,6 +112,7 @@ nav {
   background-size: cover;
   background-repeat: no-repeat;
   background-attachment: fixed;
+  background-position: 50% 50%;
 }
 
 span {
@@ -119,8 +120,6 @@ span {
   font-family: "Dancing Script", cursive;
   font-size: 4rem;
   display: inline;
-  width: 100%;
-  margin-bottom: 10px;
 }
 
 .cover h1 {
