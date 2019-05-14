@@ -1,6 +1,5 @@
 /******TODO******/
 /*  fix images  */
-/*  add grid properties  */
 /*  finalize responsive  */
 /*  animate menu  */
 /*  add content  */
@@ -57,7 +56,7 @@ h5{
   text-align: center;
   margin-bottom: 15px;
   font-size: 1.3rem;
-  font-weight: 300;
+  font-weight: 500;
 }
 
 .wrapper {
@@ -70,10 +69,11 @@ h5{
   grid-column: 3 / 11;
 }
 
+
 /************NAVIGATION***************/
 
 nav {
-  text-align: center;
+  text-align: left;
   font-size: 1.2rem;
   display: block;
   animation-name: fade;
@@ -81,7 +81,13 @@ nav {
 }
 
 .nav{
-  padding-top: 15px;
+  background: #222833;
+  padding: 5px 0 5px 0;
+  position: fixed;
+  width: 100%;
+  height: 50px;
+  z-index: 10;
+  box-shadow: 1px 1px 2px black;
 }
 
 .nav li {
@@ -89,13 +95,51 @@ nav {
    max-width: 100%;
 }
 
-.logo{
-   font-size: 2rem;
-   padding-top: 300px;
+.logo {
+   font-size: 1.8rem;
+   letter-spacing: 3px;
+}
+
+button {
+  background: none;
+  border: none;
+  float: right;
+  top: 0;
+}
+
+button:focus {
+  outline: none;
+}
+
+.fas:hover {
+  color: #d14067;
+}
+
+.fa-bars {
+  font-size: 2rem;
+  margin-right: 30px;
+  color: #5bc0be;
+  position: relative;
+  z-index: 2;
+  bottom: 40px;
+}
+
+.dropdownContent {
+  display: none;
+  position: absolute;
+  background: #222833;
+  padding-bottom: 10px;
+  top: 50px;
+} 
+
+.show {
+  display: block;
+  text-align: center;
+  width: 100%;
 }
 
 .dropdownContent li {
-  margin-top: 6px;
+  padding-top: 6px;
   border: 1px solid transparent;
 }
 
@@ -135,12 +179,11 @@ span {
 }
 
 .cover h1 {
-  margin: 20px;
+  margin: 0 20px 10px 20px;
   text-align: center;
   letter-spacing: 0.1rem;
   font-weight: 200;
   font-size: 2rem;
-  padding-top: 12vh;
   animation-name: fade;
   animation-duration: 2500ms;
 }
@@ -152,6 +195,7 @@ span {
   animation-duration: 2500ms;
   font-weight: 200;
 }
+
 
 /***************ABOUT****************/
 
@@ -174,6 +218,7 @@ img {
 .about h2 {
   margin-top: 30px;
 }
+
 
 /***************SKILLS****************/
 
@@ -213,13 +258,14 @@ img {
   color: black;
 }
 
+
 /***************PROJECTS****************/
 
 
 .grid {
   display: grid;
   margin-bottom: 60px;
-  grid-gap: 4em;
+  grid-gap: 1em;
 }
 
 .work {
@@ -387,8 +433,6 @@ img {
   }
   100%{
     opacity: 1.0;
-    /* border-top: 1px solid #d14067;
-    border-bottom: 1px solid #d14067; */
   }
 }
 
@@ -396,6 +440,33 @@ img {
 /***********MEDIA QUERIES***************/
 
 @media (min-width: 768px){
+  nav {
+    text-align: center;
+  }
+  button {
+    display: none;
+  }
+  .nav {
+    height: 53px;
+  }
+  .dropdownContent {
+    background: transparent;
+    position: static;
+  }
+  #dropdown {
+    display: inline-grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-column-gap: 30%;
+    font-size: 1.4rem;
+    padding: 0 25px 0 0;
+  }
+  .nav li {
+    padding: 6px 10px 0 10px;
+ }
+  .logo {
+    font-size: 2.2rem;
+    float: left;
+  }
   h2 {
     font-size: 3.2rem;
     padding-bottom: 40px;
@@ -409,16 +480,11 @@ img {
   .cover p {
     font-size: 2rem;
   }
-  #dropdown {
-    margin-top: 20px;
-    display: inline-grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    justify-content: center;
-    grid-column-gap: 40%;
-    font-size: 1.4rem;
-  }
   .about h2 {
     margin-top: 0;
+  }
+  .about img {
+    float: left;
   }
   .fa-laptop-code {
     padding-top: 8px;
@@ -432,14 +498,27 @@ img {
   .skills h3 {
     font-size: 1.8rem;
   }
-  .grid {
-    display: grid;
-    grid-template: 1fr 1fr / 1fr 1fr;
-    grid-gap: 4em;
-    margin-bottom: 90px;
+  .contact h3 {
+    font-size: 1.8rem;
+  }
+  .contact h4 {
+    font-size: 1.6rem;
+  }
+  .email a {
+    font-size: 1.3rem;
+    font-weight: 200;
   }
   .social {
     font-size: 2.3rem;
+  }
+}
+
+@media (min-width: 900px){
+  .grid {
+    display: grid;
+    grid-template: 1fr 1fr / 1fr 1fr;
+    grid-gap: 1em;
+    margin-bottom: 90px;
   }
 }
 
@@ -457,19 +536,14 @@ img {
   .about h2 {
     margin-top: 0;
   }
-  .logo {
-    font-size: 3rem;
+  .nav {
+    height: 55px;
   }
-  /* #dropdown {
-    display: inline-grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    justify-content: center;
-    grid-column-gap: 70%;
-    padding-top: 20px; 
-  }*/
-  .nav ul {
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr 1fr;
+  .logo {
+    font-size: 2.2rem;
+    }
+  #dropdown {
+    grid-column-gap: 60%;
   }
   span.logo{
     grid-column: 3 / 4;

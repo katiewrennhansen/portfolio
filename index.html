@@ -13,16 +13,20 @@
     <nav>
       <ul class="nav">
         <li><span class="logo">KatieWrenn</span></li>
+        <button class="toggler" type="button" data-toggle="collapse" data-target="#dropdown" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <i class="fas fa-bars"></i></button>
+
         <div class="dropdownContent" id="dropdown">
-          <li class="abt"><a href="#about">About</a></li>
+          <li class="abt border"><a href="#about">About</a></li>
           <li class="border"><a href="#work">Projects</a></li>
           <li class="border"><a href="#contact">Contact</a></li>
         </div>
       </ul>
     </nav>
-
+    <div>
       <h1 class="title">Hello! My name is <span>Katie</span></h1>
       <p>I'm a front-end web developer</p>
+    </div>
     </header>
 
 
@@ -76,9 +80,11 @@
       <div class="grid">
         <div class="project1">
             <div class="hover">
-                <h5>Otusasio Tours</h5>
-                <img class="proj" src="images/otus.png" alt="image containing link to to do list app">
+                <a href="projects/colorGame/colorGame.html" target="_blank">
+                    <img class="proj" src="images/otus.png" alt="image containing link to to do list app">
+                </a>
                 <div class="overlay">
+                    <h5>Otusasio Tours</h5>
                     <p>Live website featuring birding tours around the world.</p>
                     <a class="link" href="projects/colorGame/colorGame.html" target="_blank">View Website</a>
                 </div>
@@ -86,9 +92,9 @@
         </div>
         <div class="project1">
             <div class="hover">
-                <h5>RGB Game</h5>
                 <img class="proj" src="projects/colorGame/colorGamePhoto.png" alt="image containing link to color game project">
                 <div class="overlay">
+                    <h5>RGB Game</h5>
                     <p>Project built using jQuery for Web Developer Bootcamp</p>
                     <a class="link" href="projects/colorGame/colorGame.html" target="_blank">View Project</a>
                 </div>
@@ -96,9 +102,9 @@
         </div>
         <div class="project1">
             <div class="hover">
-                <h5>To-Do List App</h5>
                 <img class="proj" src="projects/toDo/toDoPhoto.png" alt="image containing link to to do list app">
                 <div class="overlay">
+                    <h5>To-Do List App</h5>
                     <p>Project built using jQuery for Web Developer Bootcamp</p>
                     <a class="link" href="projects/toDo/index.html" target="_blank">View Project</a>
                 </div>
@@ -106,30 +112,12 @@
         </div>
         <div class="project1">
             <div class="hover">
-                <h5>To-Do List App</h5>
                 <img class="proj" src="projects/toDo/toDoPhoto.png" alt="image containing link to to do list app">
                 <div class="overlay">
+                    <h5>To-Do List App</h5>
                     <a class="link" href="projects/colorGame/colorGame.html" target="_blank">View Project</a>
                 </div>
             </div>
-        </div>
-        <div class="project1">
-          <div class="hover">
-              <h5>To-Do List App</h5>
-              <img class="proj" src="projects/toDo/toDoPhoto.png" alt="image containing link to to do list app">
-              <div class="overlay">
-                  <a class="link" href="projects/colorGame/colorGame.html" target="_blank">View Project</a>
-              </div>
-          </div>
-        </div>
-        <div class="project1">
-          <div class="hover">
-              <h5>To-Do List App</h5>
-              <img class="proj" src="projects/toDo/toDoPhoto.png" alt="image containing link to to do list app">
-              <div class="overlay">
-                  <a class="link" href="projects/colorGame/colorGame.html" target="_blank">View Project</a>
-              </div>
-          </div>
         </div>
       </div>
     </section>
