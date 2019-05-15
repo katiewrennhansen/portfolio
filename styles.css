@@ -69,9 +69,14 @@ h5{
   grid-column: 3 / 11;
 }
 
+.about > * {
+  grid-column: 2 / 12;
+}
+
+
 
 /************NAVIGATION***************/
-
+/* 
 nav {
   text-align: left;
   font-size: 1.2rem;
@@ -111,7 +116,7 @@ button:focus {
   outline: none;
 }
 
-.fas:hover {
+.nav .fas:hover {
   color: #d14067;
 }
 
@@ -130,6 +135,7 @@ button:focus {
   background: #222833;
   padding-bottom: 10px;
   top: 50px;
+  text-transform: uppercase;
 } 
 
 .show {
@@ -143,6 +149,7 @@ button:focus {
   border: 1px solid transparent;
 }
 
+
 .dropdownContent li:hover {
   animation-name: hover;
   animation-duration: 500ms;
@@ -152,6 +159,91 @@ button:focus {
 .dropdownContent a:hover {
   color: #d14067;
 }
+
+.dropdownContent a:active {
+  color: #d14067;
+} */
+
+
+/*******NEW STYLES HERE ************/
+
+:root {
+  --background: rgba(34, 40, 51, 0.94);
+}
+
+nav {
+  background: var(--background);
+  text-align: center;
+  position: fixed;
+  width: 100%;
+  z-index: 100;
+}
+
+h3.logo{
+  padding: 5px;
+}
+
+#logo {
+  margin: 0;
+  font-size: 2rem;
+  text-align: center;
+}
+
+.navbar {
+  position: absolute;
+  text-align: left;
+  top: 100%;
+  width: 100%;
+  left: 0;
+  background: var(--background);
+  /* display: none; */
+  transform: scale(1, 0);
+  transition: transform 400ms ease-in-out;
+  transform-origin: top;
+}
+
+nav li {
+  margin-bottom: 1rem;
+  margin-left: 1rem;
+  transition: opacity 150ms ease-in-out 250ms;
+}
+
+nav a {
+  font-size: 1.1rem;
+  text-transform: uppercase;
+  opacity: 0;
+}
+
+nav a:hover {
+  color: #d14067; 
+}
+
+.show {
+  display: block;
+  transform: scale(1, 1);
+  
+}
+
+.fade {
+  opacity: 1;
+  transition: opacity 150ms ease-in-out;
+}
+
+.nav-toggle {
+  position: absolute;
+  top: 0;
+  left: 0;
+  margin-left: 1rem;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  background: transparent;
+  color: white;
+  font-size: 2rem;
+  border: none;
+  cursor: pointer;
+}
+
 
 
 /************LANDING PAGE**************/
@@ -179,7 +271,7 @@ span {
 }
 
 .cover h1 {
-  margin: 0 20px 10px 20px;
+  margin: 300px 20px 10px 20px;
   text-align: center;
   letter-spacing: 0.1rem;
   font-weight: 200;
@@ -200,11 +292,19 @@ span {
 /***************ABOUT****************/
 
 .about {
-  background: #fcfcfc;
+  background: #f4f4f4;
   color: #444545;
   margin: 0;
-  padding: 60px 0 60px 0;
   font-size: 1.2rem;
+  grid-column: 2 / 12;
+}
+
+.about .wrapper {
+  background: white;
+}
+
+.image {
+  margin-top: 120px;
 }
 
 img {
@@ -216,14 +316,16 @@ img {
 }
 
 .about h2 {
-  margin-top: 30px;
+  text-transform: uppercase;
+  font-size: 2.5rem;
+  font-weight: 700;
 }
 
 
 /***************SKILLS****************/
 
 .skills {
-  background: #fff;
+  background: #f4f4f4;
   padding: 60px 0 60px 0;
   color: #0b132b;
   font-size: 1.2rem;
@@ -274,7 +376,10 @@ img {
 }
 
 .work h2 {
-  padding-top: 60px;
+  padding-top: 120px;
+  text-transform: uppercase;
+  font-size: 2.5rem;
+  font-weight: 700;
 }
 
 .hover {
@@ -360,6 +465,10 @@ img {
   padding-bottom: 20px;
 }
 
+.contact h2 {
+  padding-top: 80px;
+}
+
 .contact h3 {
   font-size: 1.6rem;
 }
@@ -371,13 +480,20 @@ img {
 
 .email a {
   color: #5bc0be;
-  font-size: 1rem;
+  font-size: 1.4rem;
   font-weight: 500;
-  text-decoration: underline;
+  border: 1px solid #5bc0be;
+  padding: 10px;
+}
+
+.email {
+  margin-bottom: 25px;
 }
 
 .email a:hover {
-  color: #d14067;
+  color: white;
+  background: #d14067;
+  border: 1px solid #d14067;
   animation-name: hover;
   animation-duration: 500ms;
   animation-fill-mode: forwards;
@@ -440,12 +556,28 @@ img {
 /***********MEDIA QUERIES***************/
 
 @media (min-width: 768px){
-  nav {
-    text-align: center;
-  }
-  button {
+  .nav-toggle {
     display: none;
   }
+  nav{
+    display: grid;
+    grid-template-columns: 1fr auto minmax(600px, 1fr) 1fr;
+  }
+  .logo {
+    grid-column: 2 / span 1;
+  }
+  .navbar {
+    all: unset; /*not working on some browsers!!*/
+    grid-column: 3 / 4;
+  }
+  nav a {
+    opacity: 1;
+  }
+  
+  /* nav {
+    text-align: center;
+  }
+  
   .nav {
     height: 53px;
   }
@@ -456,9 +588,10 @@ img {
   #dropdown {
     display: inline-grid;
     grid-template-columns: 1fr 1fr 1fr;
-    grid-column-gap: 30%;
-    font-size: 1.4rem;
-    padding: 0 25px 0 0;
+    grid-column-gap: 24%;
+    font-size: 1.2rem;
+    padding: 0 50px 0 0;
+    margin-top: 5px;
   }
   .nav li {
     padding: 6px 10px 0 10px;
@@ -466,7 +599,7 @@ img {
   .logo {
     font-size: 2.2rem;
     float: left;
-  }
+  } */
   h2 {
     font-size: 3.2rem;
     padding-bottom: 40px;
@@ -505,8 +638,8 @@ img {
     font-size: 1.6rem;
   }
   .email a {
-    font-size: 1.3rem;
-    font-weight: 200;
+    font-size: 1.5rem;
+    font-weight: 500;
   }
   .social {
     font-size: 2.3rem;
@@ -543,7 +676,7 @@ img {
     font-size: 2.2rem;
     }
   #dropdown {
-    grid-column-gap: 60%;
+    grid-column-gap: 50%;
   }
   span.logo{
     grid-column: 3 / 4;
