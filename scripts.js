@@ -8,13 +8,14 @@ button.addEventListener('click', function(){
 
 
 button.addEventListener('click', function(){
-  document.getElementById('abt').classList.toggle("fade");
+  document.getElementById('link-abt').classList.toggle("fade");
 });
 
 button.addEventListener('click', function(){
-  document.getElementById('work').classList.toggle("fade");
+  document.getElementById('link-work').classList.toggle("fade");
 });
 
 button.addEventListener('click', function(){
-  document.getElementById('contact').classList.toggle("fade");
+  document.getElementById('link-contact').classList.toggle("fade");
 });
+

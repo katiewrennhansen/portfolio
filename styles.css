@@ -29,6 +29,22 @@ body {
 a {
   color: #f1fffa;
   text-decoration: none;
+  outline: none;
+}
+
+a:focus { 
+  outline: thin solid white; 
+} 
+a:active {  
+  outline: none;
+} 
+
+button:focus {
+  outline: thin solid white; 
+}
+
+button:active {
+  outline: none;
 }
 
 a:hover {
@@ -76,96 +92,6 @@ h5{
 
 
 /************NAVIGATION***************/
-/* 
-nav {
-  text-align: left;
-  font-size: 1.2rem;
-  display: block;
-  animation-name: fade;
-  animation-duration: 2500ms;
-}
-
-.nav{
-  background: #222833;
-  padding: 5px 0 5px 0;
-  position: fixed;
-  width: 100%;
-  height: 50px;
-  z-index: 10;
-  box-shadow: 1px 1px 2px black;
-}
-
-.nav li {
-   padding: 5px 10px 5px 10px;
-   max-width: 100%;
-}
-
-.logo {
-   font-size: 1.8rem;
-   letter-spacing: 3px;
-}
-
-button {
-  background: none;
-  border: none;
-  float: right;
-  top: 0;
-}
-
-button:focus {
-  outline: none;
-}
-
-.nav .fas:hover {
-  color: #d14067;
-}
-
-.fa-bars {
-  font-size: 2rem;
-  margin-right: 30px;
-  color: #5bc0be;
-  position: relative;
-  z-index: 2;
-  bottom: 40px;
-}
-
-.dropdownContent {
-  display: none;
-  position: absolute;
-  background: #222833;
-  padding-bottom: 10px;
-  top: 50px;
-  text-transform: uppercase;
-} 
-
-.show {
-  display: block;
-  text-align: center;
-  width: 100%;
-}
-
-.dropdownContent li {
-  padding-top: 6px;
-  border: 1px solid transparent;
-}
-
-
-.dropdownContent li:hover {
-  animation-name: hover;
-  animation-duration: 500ms;
-  animation-fill-mode: forwards;
-}
-
-.dropdownContent a:hover {
-  color: #d14067;
-}
-
-.dropdownContent a:active {
-  color: #d14067;
-} */
-
-
-/*******NEW STYLES HERE ************/
 
 :root {
   --background: rgba(34, 40, 51, 0.94);
@@ -196,7 +122,6 @@ h3.logo{
   width: 100%;
   left: 0;
   background: var(--background);
-  /* display: none; */
   transform: scale(1, 0);
   transition: transform 400ms ease-in-out;
   transform-origin: top;
@@ -492,12 +417,15 @@ img {
 
 .email a:hover {
   color: white;
-  background: #d14067;
+  /* background: #d14067; */
   border: 1px solid #d14067;
-  animation-name: hover;
-  animation-duration: 500ms;
-  animation-fill-mode: forwards;
+  /*newstyles*/
+  background: linear-gradient(to right, #222833 50%, #d14067 50%);
+  background-size: 200% 100%;
+  background-position: right bottom;
+  transition: all 250ms ease-out;
 }
+
 
 .contact h4 {
   padding-bottom: 20px;
@@ -561,45 +489,47 @@ img {
   }
   nav{
     display: grid;
-    grid-template-columns: 1fr auto minmax(600px, 1fr) 1fr;
+    grid-template-columns: 1fr auto minmax(600px, 3fr) 1fr;
   }
   .logo {
     grid-column: 2 / span 1;
   }
   .navbar {
-    all: unset; /*not working on some browsers!!*/
+    all: unset; /*not working on IE or EDGE!!*/
     grid-column: 3 / 4;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
   }
   nav a {
     opacity: 1;
+    position: relative;
   }
-  
-  /* nav {
-    text-align: center;
+  .navbar a::before{
+    content: '';
+    display: block;
+    height: 3px;
+    background: #d14067;
+    position: absolute;
+    top: -0.35em;
+    left:0;
+    right: 0;
+    transform: scale(0, 1);
+    transform-origin: left;
+    transition: transform ease-in-out 250ms;
   }
-  
-  .nav {
-    height: 53px;
+  nav a:hover::before {
+    transform: scale(1,1);
   }
-  .dropdownContent {
-    background: transparent;
-    position: static;
-  }
-  #dropdown {
-    display: inline-grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    grid-column-gap: 24%;
-    font-size: 1.2rem;
-    padding: 0 50px 0 0;
+  .navbar ul {
+    display: flex;
+    justify-content: flex-end;
     margin-top: 5px;
   }
-  .nav li {
-    padding: 6px 10px 0 10px;
- }
-  .logo {
-    font-size: 2.2rem;
-    float: left;
-  } */
+  .navbar li {
+    display: inline;
+    margin-left: 3.5rem;
+  }
   h2 {
     font-size: 3.2rem;
     padding-bottom: 40px;
@@ -631,6 +561,9 @@ img {
   .skills h3 {
     font-size: 1.8rem;
   }
+  .contact h2 {
+    padding: 60px 0 30px 0;
+  }
   .contact h3 {
     font-size: 1.8rem;
   }
@@ -656,6 +589,12 @@ img {
 }
 
 @media (min-width: 1130px) {
+  nav{
+    grid-template-columns: 50px auto minmax(600px, 3fr) 150px;
+  }
+  .navbar li {
+    margin-left: 9rem;
+  }
   .cover h1 {
     font-size: 4rem;
   }
@@ -668,18 +607,6 @@ img {
   }
   .about h2 {
     margin-top: 0;
-  }
-  .nav {
-    height: 55px;
-  }
-  .logo {
-    font-size: 2.2rem;
-    }
-  #dropdown {
-    grid-column-gap: 50%;
-  }
-  span.logo{
-    grid-column: 3 / 4;
   }
   img {
     width: 320px;
