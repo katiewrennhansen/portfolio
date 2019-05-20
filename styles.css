@@ -1,8 +1,8 @@
 /******TODO******/
+/*  add content  */
 /*  fix images  */
 /*  finalize responsive  */
-/*  animate menu  */
-/*  add content  */
+/*  add prefixes  */
 /*  refactor code  */
 /*  go live!  */
 
@@ -10,6 +10,7 @@
 /**********GENERAL STYLES************/
 html {
   box-sizing: border-box;
+  scroll-behavior: smooth;
 }
 
 *, *:before, *:after {
@@ -40,7 +41,7 @@ a:active {
 } 
 
 button:focus {
-  outline: thin solid white; 
+  outline: none; 
 }
 
 button:active {
@@ -110,9 +111,11 @@ h3.logo{
 }
 
 #logo {
+  display: block;
   margin: 0;
   font-size: 2rem;
   text-align: center;
+  text-transform: none;
 }
 
 .navbar {
@@ -168,7 +171,14 @@ nav a:hover {
   border: none;
   cursor: pointer;
 }
+.nav-toggle:hover {
+  color: #d14067;
+}
 
+#nav.fade-in {
+  transition: all ease .5s;
+  background: var(--background); // Change background to black on scroll
+}
 
 
 /************LANDING PAGE**************/
@@ -489,7 +499,8 @@ img {
   }
   nav{
     display: grid;
-    grid-template-columns: 1fr auto minmax(600px, 3fr) 1fr;
+    grid-template-columns: 50px auto minmax(500px, 3fr) 150px;
+    background: transparent;
   }
   .logo {
     grid-column: 2 / span 1;
@@ -561,6 +572,12 @@ img {
   .skills h3 {
     font-size: 1.8rem;
   }
+  .grid {
+    display: grid;
+    grid-template: 1fr 1fr / 1fr 1fr;
+    grid-gap: 1em;
+    margin-bottom: 90px;
+  }
   .contact h2 {
     padding: 60px 0 30px 0;
   }
@@ -576,15 +593,6 @@ img {
   }
   .social {
     font-size: 2.3rem;
-  }
-}
-
-@media (min-width: 900px){
-  .grid {
-    display: grid;
-    grid-template: 1fr 1fr / 1fr 1fr;
-    grid-gap: 1em;
-    margin-bottom: 90px;
   }
 }
 

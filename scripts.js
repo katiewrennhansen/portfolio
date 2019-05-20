@@ -19,3 +19,17 @@ button.addEventListener('click', function(){
   document.getElementById('link-contact').classList.toggle("fade");
 });
 
+
+
+//NAV SCROLL FADE IN
+$(document).ready(function() {
+	$(window).scroll(function() {
+  	if($(document).scrollTop() > 10) {
+    	$('#nav').addClass('fade-in');
+    }
+    else {
+    $('#nav').removeClass('fade-in');
+    }
+  });
+});
+
