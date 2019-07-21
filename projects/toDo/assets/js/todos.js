@@ -1,4 +1,4 @@
-//Check of TODOs with click
+//Check off TODOs with click
 $('ul').on('click', 'li', function(){
   $(this).toggleClass('completed');
 });

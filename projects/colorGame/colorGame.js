@@ -54,15 +54,15 @@ function setupSquares(){
 
 //*************** EVENT LISTENERS ****************
 
-for(var i = 0; i < modeButtons.length; i++){
-  modeButtons[i].addEventListener("click", function(){
-    modeButtons[0].classList.remove("selected");
-    modeButtons[1].classList.remove("selected");
-    this.classList.add("selected");
-    this.textContent === "Easy" ? numSquares = 3 : numSquares = 6
-    reset();
-  });
-}
+// for(var i = 0; i < modeButtons.length; i++){
+//   modeButtons[i].addEventListener("click", function(){
+//     modeButtons[0].classList.remove("selected");
+//     modeButtons[1].classList.remove("selected");
+//     this.classList.add("selected");
+//     this.textContent === "Easy" ? numSquares = 3 : numSquares = 6
+//     reset();
+//   });
+// }
 
 
 resetButton.addEventListener("click", function(){

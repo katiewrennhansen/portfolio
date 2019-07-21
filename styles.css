@@ -177,7 +177,7 @@ nav a:hover {
 
 #nav.fade-in {
   transition: all ease .5s;
-  background: var(--background); // Change background to black on scroll
+  background: var(--background); 
 }
 
 
@@ -357,6 +357,7 @@ img {
   opacity: 1;
   transition: .5s ease;
   backface-visibility: hidden;
+  box-shadow: 1px 1px 2px #ccc;
 }
 
 .overlay {
